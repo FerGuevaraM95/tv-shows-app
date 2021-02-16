@@ -23,6 +23,7 @@ export const ShowTitle = styled.h2`
 export const RaitingBox = styled.div`
   display: flex;
   margin-bottom: 10px;
+  padding-bottom: 20px;
 `;
 
 export const Raiting = styled.p`

@@ -6,7 +6,7 @@ export const List = styled.div`
   max-width: 500px;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  &::-webkit-scrollbar {
+  /* &::-webkit-scrollbar {
     display: none;
-  };
+  }; */
 `;
