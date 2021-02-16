@@ -29,8 +29,8 @@ export const GlobalStyles = createGlobalStyle`
     background: #FFFFFF;
     height: 100vh;
     margin: 0 auto;
-    max-width: 500px;
-    overscroll-behavior: none;
-    width: 100%;
+    // max-width: 500px;
+    // overscroll-behavior: none;
+    // width: 100%;
   }
 `;
