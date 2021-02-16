@@ -1,7 +1,11 @@
+import { GlobalStyles } from "./GlobalStyles";
+import { AppRouter } from "./router/AppRouter";
+
 function App() {
   return (
     <div>
-      <p>hello world!</p>
+      <GlobalStyles />
+      <AppRouter />
     </div>
   );
 }
