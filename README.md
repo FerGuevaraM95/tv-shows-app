@@ -7,6 +7,8 @@ Aplicacion de React que hace uso de la API de [The Movie DB](https://themoviedb.
 2. Se creo el manejo de rutas con react-router-dom.
 3. Se eligió styled-components para el manejo de estilos del proyecto.
     - Se crearón los estilos globales que aplicarán a toda la app.
+4. Se maqueto la pantalla de inicio
+    - Se utilizaron las propiedades de scroll snap de CSS para una experiencia que simula una app móvil all hacer scroll sobre nuestros shows
 
 
 ### `npm start`

@@ -27,10 +27,20 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background: #FFFFFF;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0 auto;
-    max-width: 500px;
-    overscroll-behavior: none;
-    width: 100%;
+    // max-width: 500px;
+    // overscroll-behavior: none;
+    // width: 100%;
+  }
+
+  .app {
+    @media(min-width: 500px) {
+      max-width: 500px;
+      margin: 20px auto;
+      /* background-color: red; */
+      border-radius: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
   }
 `;
