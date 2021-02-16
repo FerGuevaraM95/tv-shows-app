@@ -1,4 +1,4 @@
-import { ShowList } from "../../components/ShowList"
+import { ShowList } from "../../components/ShowList";
 
 export const PopularPage = () => {
   return (

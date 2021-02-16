@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
 export const Card = styled.div`
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  scroll-snap-align: center;
 `;
 
 export const ShowImage = styled.img`

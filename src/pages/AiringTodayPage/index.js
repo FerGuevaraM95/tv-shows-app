@@ -1,9 +1,9 @@
-import React from 'react'
+import { ShowList } from "../../components/ShowList";
 
 export const AiringTodayPage = () => {
   return (
     <div>
-      <p>Airing Today Page</p>
+      <ShowList />
     </div>
   )
 }
