@@ -5,7 +5,7 @@ export const Nav = styled.nav`
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  margin: 32px 16px;
+  margin: 32px 16px 24px;
   &::-webkit-scrollbar {
     display: none;
   }
