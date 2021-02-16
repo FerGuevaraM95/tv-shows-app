@@ -1,7 +1,9 @@
+import { ShowList } from "../../components/ShowList"
+
 export const PopularPage = () => {
   return (
     <div>
-      <p>Popular Page</p>
+      <ShowList />
     </div>
   );
 };
