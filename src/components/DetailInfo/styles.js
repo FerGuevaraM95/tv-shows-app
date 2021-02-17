@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   margin: 24px;
+
+  @media(min-width: 500px) {
+    padding-bottom: 180px;
+  }
 `;
 
 export const Title = styled.h1`

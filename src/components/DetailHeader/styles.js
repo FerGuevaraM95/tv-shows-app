@@ -34,6 +34,8 @@ export const InfoCard = styled.div`
   border-bottom-left-radius: 50px;
   background-color: #FFFFFF;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  
 `;
 
 export const ValueContainer = styled.div`
