@@ -1,7 +1,12 @@
+import { DetailHeader } from "../../components/DetailHeader"
+import { DetailInfo } from "../../components/DetailInfo"
+
+
 export const DetailPage = () => {
   return (
     <div>
-      <p>Detail Page</p>
+      <DetailHeader />
+      <DetailInfo />
     </div>
   );
 };
