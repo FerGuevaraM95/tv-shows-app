@@ -9,6 +9,7 @@ Aplicacion de React que hace uso de la API de [The Movie DB](https://themoviedb.
     - Se crearón los estilos globales que aplicarán a toda la app.
 4. Se maqueto la pantalla de inicio
     - Se utilizaron las propiedades de scroll snap de CSS para una experiencia que simula una app móvil all hacer scroll sobre nuestros shows
+5. Se maqueto la pantalla de detalle
 
 
 ### `npm start`
