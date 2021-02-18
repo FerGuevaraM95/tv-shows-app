@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 export const Card = styled.div`
   flex: 0 0 auto;
@@ -14,10 +15,12 @@ export const ShowImage = styled.img`
   border-radius: 30px;
 `;
 
-export const ShowTitle = styled.h2`
+export const ShowTitle = styled(Link)`
+  display: block;
   margin: 20px auto 4px;
   font-size: 16px;
   font-weight: 600;
+  text-decoration: none;
   color: #12153D;
 `;
 
