@@ -11,6 +11,7 @@ export const Card = styled.div`
 
 export const ShowImage = styled.img`
   width: 65%;
+  border-radius: 30px;
 `;
 
 export const ShowTitle = styled.h2`

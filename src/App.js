@@ -1,11 +1,16 @@
 import { GlobalStyles } from "./GlobalStyles";
 import { AppRouter } from "./router/AppRouter";
+import { Provider } from "react-redux";
+
+import store from "./store";
 
 function App() {
   return (
     <div>
-      <GlobalStyles />
-      <AppRouter />
+      <Provider store={store}>
+        <GlobalStyles />
+        <AppRouter />
+      </Provider>
     </div>
   );
 }

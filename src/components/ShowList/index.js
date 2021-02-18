@@ -1,17 +1,23 @@
 import { ShowCard } from "../ShowCard";
 import { List } from "./styles";
 
-export const ShowList = () => {
+export const ShowList = ({ data }) => {
 
-  const shows = [1, 2, 3, 4, 5, 6];
+  const renderItems = (list = []) => {
+    return list.map((show) => {
+      const { id, name, poster_path, vote_average } = show;
+      const img = `https://image.tmdb.org/t/p/original${poster_path}`;
+      return (
+        <ShowCard
+          key={id}
+          id={id}
+          name={name}
+          poster={img}
+          vote={vote_average}
+        />
+      );
+    });
+  };
 
-  return (
-    <List>
-      {
-        shows.map((show) =>(
-          <ShowCard key={show} />
-        ))
-      }
-    </List>
-  );
+  return <List>{renderItems(data.results)}</List>;
 };
