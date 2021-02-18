@@ -13,7 +13,7 @@ export const AppRouter = () => {
     <Router>
       <div className="app">
         <Switch>
-          <Route exact path="/detail" component={DetailPage} />
+          <Route path="/show-detail/:id" component={DetailPage} />
           <Route path="/" component={HomeRouter} />
           <Redirect to="/" />
         </Switch>

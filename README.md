@@ -13,7 +13,10 @@ Aplicacion de React que hace uso de la API de [The Movie DB](https://themoviedb.
 5. Se maquetó la pantalla de detalle
 6. Se configuró Redux como manejador de estado global
 7. Se utilizó redux-thunk para el manejo de redux de manera asíncrona.
-8. Mapeo de la data obtenida con fetch a cada una de nuestras vistas, pintando asi las listas de nuestros shows
+8. Mapeo de la data obtenida con fetch a cada una de nuestras vistas, pintando así las listas de nuestros shows
+9. Manejo de ruta por id de show
+10. Se pinto la data del show obtenido
+    - se crearon algunos métodos para el seteo del tiempo aproximado, listar los géneros, etc.
 
 ### `npm start`
 

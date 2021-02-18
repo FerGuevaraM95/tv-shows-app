@@ -14,22 +14,22 @@ import {
   SubSpan
 } from "./styles";
 
-export const DetailHeader = () => {
+export const DetailHeader = ({ name, poster, vote, voteCount, popularity }) => {
   return (
     <Container>
-      <Image src={Show} alt="Ford V Ferrari" />
+      <Image src={poster} alt={name} />
       <InfoCard>
         <ValueContainer>
           <Star src={star} alt="star" />
-          <Span>8.2<SubSpan>/10</SubSpan></Span>
-          <SpanLight>150212</SpanLight>
+          <Span>{vote}<SubSpan>/10</SubSpan></Span>
+          <SpanLight>{voteCount}</SpanLight>
         </ValueContainer>
         <ValueContainer>
           <FavoriteStar src={starGray} alt="star" />
           <Span>Favorito</Span>
         </ValueContainer>
         <ValueContainer>
-          <PopularitySquad>86</PopularitySquad>
+          <PopularitySquad>{Math.trunc(popularity)}</PopularitySquad>
           <Span>Popularidad</Span>
         </ValueContainer>
       </InfoCard>
