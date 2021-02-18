@@ -10,27 +10,45 @@ import {
   Text,
 } from "./styles";
 
-export const DetailInfo = () => {
+export const DetailInfo = ({
+  name,
+  lastAirDate,
+  runTime,
+  type,
+  genres,
+  overview,
+}) => {
+
+  // Show only year
+  const onlyYear = (date = "") => {
+    return date.split("-")[0] || "";
+  };
+
+  // Map genres
+  const setGenres = (arr = []) => {
+    return arr.map((genre) => {
+      const { id, name } = genre;
+      return <CategoryChip key={id}>{name}</CategoryChip>;
+    });
+  };
+
+  // Approximate time
+  const setApproxRunTime = (arr = []) => {
+    return (arr.reduce((acc, curr) => (acc + curr), 0) / arr.length) || 0;
+  };
+
   return (
     <Container>
-      <Title>Ford V Ferrari</Title>
+      <Title>{name}</Title>
       <InfoContainer>
-        <Info>2019</Info>
-        <Info>PG - 13</Info>
-        <Info>2h 32min</Info>
+        <Info>{onlyYear(lastAirDate)}</Info>
+        <Info>{setApproxRunTime(runTime)}min</Info>
+        <Info>{type}</Info>
       </InfoContainer>
-      <Categories>
-        <CategoryChip>Acción</CategoryChip>
-        <CategoryChip>Suspenso</CategoryChip>
-        <CategoryChip>Drama</CategoryChip>
-      </Categories>
+      <Categories>{setGenres(genres)}</Categories>
       <Summary>
-        <Subtitle>Plot Summary</Subtitle>
-        <Text>
-          American car designer Carroll Shelby and driver Kn Miles battle
-          corporate interference and the laws of physics to build a
-          revolutionary race car for Ford in order.
-        </Text>
+        <Subtitle>Sinopsis</Subtitle>
+        <Text>{overview}</Text>
       </Summary>
     </Container>
   );

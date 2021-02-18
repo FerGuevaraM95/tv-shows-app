@@ -18,6 +18,7 @@ export const Image = styled.img`
   position: absolute;
   width: 100%;
   bottom: 36px;
+  border-bottom-left-radius: 30px;
   /* max-height:500px; */
 `;
 
