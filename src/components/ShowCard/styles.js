@@ -26,7 +26,7 @@ export const ShowTitle = styled(Link)`
 
 export const RaitingBox = styled.div`
   display: flex;
-  margin-bottom: 10px;
+  margin: 10px auto;
   padding-bottom: 20px;
 `;
 
