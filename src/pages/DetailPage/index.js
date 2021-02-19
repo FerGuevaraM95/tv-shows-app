@@ -5,7 +5,7 @@ import { DetailHeader } from "../../components/DetailHeader";
 import { DetailInfo } from "../../components/DetailInfo";
 import { getDataById } from "../../actions/showsActions";
 
-export const DetailPage = ({ match }) => {
+const DetailPage = ({ match }) => {
   // Show ID
   const id = match.params.id;
   const dispatch = useDispatch();
@@ -55,3 +55,5 @@ export const DetailPage = ({ match }) => {
     </div>
   );
 };
+
+export default DetailPage;

@@ -6,7 +6,7 @@ import { ShowList } from "../../components/ShowList";
 import { ShowListSkeleton } from '../../components/ShowListSkeleton';
 
 
-export const PopularPage = () => {
+const PopularPage = () => {
 
   const shows = useSelector((state) => state.shows.data);
   const loading = useSelector((state) => state.shows.loading);
@@ -24,3 +24,5 @@ export const PopularPage = () => {
     </div>
   );
 };
+
+export default PopularPage;

@@ -5,7 +5,7 @@ import { getData } from '../../actions/showsActions';
 import { ShowList } from "../../components/ShowList";
 import { ShowListSkeleton } from '../../components/ShowListSkeleton';
 
-export const TopRatedPage = () => {
+const TopRatedPage = () => {
 
   const shows = useSelector((state) => state.shows.data);
   const loading = useSelector((state) => state.shows.loading);
@@ -23,3 +23,5 @@ export const TopRatedPage = () => {
     </div>
   );
 };
+
+export default TopRatedPage;

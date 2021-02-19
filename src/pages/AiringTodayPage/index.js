@@ -5,7 +5,7 @@ import { getData } from '../../actions/showsActions';
 import { ShowList } from "../../components/ShowList";
 import { ShowListSkeleton } from '../../components/ShowListSkeleton';
 
-export const AiringTodayPage = () => {
+const AiringTodayPage = () => {
 
   const shows = useSelector((state) => state.shows.data);
   const loading = useSelector((state) => state.shows.loading);
@@ -23,3 +23,5 @@ export const AiringTodayPage = () => {
     </div>
   );
 };
+
+export default AiringTodayPage;
