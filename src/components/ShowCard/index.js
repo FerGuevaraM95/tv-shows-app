@@ -11,7 +11,7 @@ import {
 export const ShowCard = ({ id, name, poster, vote }) => {
   return (
     <Card>
-      <ShowImage src={poster} alt={name} />
+      <ShowImage src={poster} alt={name} loading="lazy" />
       <h2>
         <ShowTitle to={`/show-detail/${id}`}>{name}</ShowTitle>
       </h2>

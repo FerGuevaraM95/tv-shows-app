@@ -16,7 +16,7 @@ import {
 export const DetailHeader = ({ name, poster, vote, voteCount, popularity }) => {
   return (
     <Container>
-      <Image src={poster} alt={name} />
+      <Image src={poster} alt={name} loading="lazy" />
       <InfoCard>
         <ValueContainer>
           <Star src={star} alt="star" />
