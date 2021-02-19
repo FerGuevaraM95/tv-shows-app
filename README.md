@@ -17,6 +17,8 @@ Aplicacion de React que hace uso de la API de [The Movie DB](https://themoviedb.
 9. Manejo de ruta por id de show
 10. Se pinto la data del show obtenido
     - se crearon algunos métodos para el seteo del tiempo aproximado, listar los géneros, etc.
+11. Se manejaron plas páginas por medio de react lazy en apoyo con react suspense para un mejor performance y mejor UX
+12. Se agregaron loaders de tipo 'esqueleto' a los componentes
 
 ### `npm start`
 
