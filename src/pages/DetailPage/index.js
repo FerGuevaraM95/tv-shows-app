@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { DetailHeader } from "../../components/DetailHeader";
 import { DetailInfo } from "../../components/DetailInfo";
+import { DetailSkeleton } from "../../components/DetailSkeleton";
 import { getDataById } from "../../actions/showsActions";
 
 const DetailPage = ({ match }) => {
@@ -10,6 +11,7 @@ const DetailPage = ({ match }) => {
   const id = match.params.id;
   const dispatch = useDispatch();
   const show = useSelector((state) => state.shows.show);
+  const loading = useSelector((state) => state.shows.loading);
 
   // Fetch show
   useEffect(() => {
@@ -34,6 +36,8 @@ const DetailPage = ({ match }) => {
   } = show;
 
   const img = `https://image.tmdb.org/t/p/original${poster_path}`;
+
+  if (loading) return <DetailSkeleton />;
 
   return (
     <div>
