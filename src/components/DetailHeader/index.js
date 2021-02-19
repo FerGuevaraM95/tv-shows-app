@@ -1,4 +1,3 @@
-import Show from "../../images/show.png";
 import star from "../../images/star.svg";
 import starGray from "../../images/star-gray.svg";
 import {
@@ -17,7 +16,7 @@ import {
 export const DetailHeader = ({ name, poster, vote, voteCount, popularity }) => {
   return (
     <Container>
-      <Image src={poster} alt={name} />
+      <Image src={poster} alt={name} loading="lazy" />
       <InfoCard>
         <ValueContainer>
           <Star src={star} alt="star" />

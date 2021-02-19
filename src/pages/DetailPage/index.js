@@ -3,13 +3,15 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { DetailHeader } from "../../components/DetailHeader";
 import { DetailInfo } from "../../components/DetailInfo";
+import { DetailSkeleton } from "../../components/DetailSkeleton";
 import { getDataById } from "../../actions/showsActions";
 
-export const DetailPage = ({ match }) => {
+const DetailPage = ({ match }) => {
   // Show ID
   const id = match.params.id;
   const dispatch = useDispatch();
   const show = useSelector((state) => state.shows.show);
+  const loading = useSelector((state) => state.shows.loading);
 
   // Fetch show
   useEffect(() => {
@@ -18,7 +20,7 @@ export const DetailPage = ({ match }) => {
         `http://api.themoviedb.org/3/tv/${id}?api_key=6b17ac3b7653f11d47fc4e9fc7c753c7`
       )
     );
-  }, []);
+  }, [dispatch, id]);
 
   const {
     poster_path = '',
@@ -34,6 +36,8 @@ export const DetailPage = ({ match }) => {
   } = show;
 
   const img = `https://image.tmdb.org/t/p/original${poster_path}`;
+
+  if (loading) return <DetailSkeleton />;
 
   return (
     <div>
@@ -55,3 +59,5 @@ export const DetailPage = ({ match }) => {
     </div>
   );
 };
+
+export default DetailPage;

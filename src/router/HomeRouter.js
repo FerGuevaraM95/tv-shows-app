@@ -1,25 +1,32 @@
+import React, { Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 
-import { PopularPage } from "../pages/PopularPage";
-import { TopRatedPage } from "../pages/TopRatedPage";
-import { AiringTodayPage } from "../pages/AiringTodayPage";
 import { Header } from "../components/layout/Header";
 import { Navbar } from "../components/layout/Navbar";
 import { Filter } from "../components/layout/Filter";
+import { Loader } from "../components/layout/Loader";
 
-export const HomeRouter = () => {
+const PopularPage = React.lazy(() => import("../pages/PopularPage"));
+const TopRatedPage = React.lazy(() => import("../pages/TopRatedPage"));
+const AiringTodayPage = React.lazy(() => import("../pages/AiringTodayPage"));
+
+const HomeRouter = () => {
   return (
     <div>
-      <Header />
-      <Navbar />
-      <Filter />
-      <Switch>
-        <Route exact path="/popular" component={PopularPage} />
-        <Route exact path="/top-rated" component={TopRatedPage} />
-        <Route exact path="/airing-today" component={AiringTodayPage} />
+      <Suspense fallback={<Loader />}>
+        <Header />
+        <Navbar />
+        <Filter />
+        <Switch>
+          <Route exact path="/popular" component={PopularPage} />
+          <Route exact path="/top-rated" component={TopRatedPage} />
+          <Route exact path="/airing-today" component={AiringTodayPage} />
 
-        <Redirect to="/popular" />
-      </Switch>
+          <Redirect to="/popular" />
+        </Switch>
+      </Suspense>
     </div>
   );
 };
+
+export default HomeRouter;
