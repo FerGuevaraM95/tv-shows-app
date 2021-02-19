@@ -1,4 +1,3 @@
-import Show from "../../images/show.png";
 import star from "../../images/star.svg";
 import starGray from "../../images/star-gray.svg";
 import {
