@@ -13,7 +13,7 @@ const TopRatedPage = () => {
 
   useEffect(() => {
     dispatch(getData('https://api.themoviedb.org/3/tv/top_rated?api_key=6b17ac3b7653f11d47fc4e9fc7c753c7'));
-  }, []);
+  }, [dispatch]);
 
   if (loading) return <ShowListSkeleton />;
 
