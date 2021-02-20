@@ -18,7 +18,6 @@ export const Filter = () => {
     dispatch(orderList(type));
   };
 
-  console.log({ order });
   const printChips = () => {
     return optionsChip.map((option) => {
       const { id, value, name } = option;

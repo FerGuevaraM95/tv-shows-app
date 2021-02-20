@@ -4,11 +4,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getData } from '../../actions/showsActions';
 import { ShowList } from "../../components/ShowList";
 import { ShowListSkeleton } from '../../components/ShowListSkeleton';
+import { orderShows } from '../../utils/orderShows';
 
 const AiringTodayPage = () => {
 
   const shows = useSelector((state) => state.shows.data);
   const loading = useSelector((state) => state.shows.loading);
+  const order = useSelector((state) => state.shows.order);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,7 +21,7 @@ const AiringTodayPage = () => {
 
   return (
     <div>
-      <ShowList data={shows} />
+      <ShowList data={orderShows(shows, order)} />
     </div>
   );
 };
