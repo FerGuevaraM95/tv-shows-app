@@ -22,5 +22,6 @@ export const Chip = styled.li`
   background-color: ${props => props.isActive ? "#FE6D8E" : "#FFFFFF"};
   border: solid 0.75px ${props => props.isActive ? "#FFFFFF" : "#DCDCE2"};
   border-radius: 25px;
+  cursor: pointer;
 `;
 

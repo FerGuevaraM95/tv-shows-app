@@ -10,6 +10,11 @@ export const Card = styled.div`
   scroll-snap-align: center;
 `;
 
+export const LinkImage = styled(Link)`
+  display: flex;
+  justify-content: center;
+`;
+
 export const ShowImage = styled.img`
   width: 65%;
   border-radius: 30px;

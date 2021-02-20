@@ -29,11 +29,12 @@ export const Info = styled.span`
 
 export const Categories = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   margin: 12px 0;
 `;
 
 export const CategoryChip = styled.li`
-  margin: 0 6px;
+  margin: 0 6px 6px;
   padding: 4px 12px;
   font-size: 10px;
   font-weight: 500;
