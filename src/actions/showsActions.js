@@ -2,7 +2,8 @@ import {
   GET_DATA_STARTED,
   GET_DATA_SUCCESS,
   GET_DATA_FAILURE,
-  GET_SHOW_SUCCESS
+  GET_SHOW_SUCCESS,
+  ORDER_LIST,
 } from "../types/showsTypes";
 
 const getDataStarted = () => ({
@@ -30,13 +31,18 @@ const getShowSuccess = (todo) => ({
   },
 });
 
+export const orderList = (option) => ({
+  type: ORDER_LIST,
+  payload: option
+});
+
 export const getData = (url) => {
   return (dispatch) => {
     dispatch(getDataStarted());
 
     fetch(url)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         dispatch(getDataSuccess(data));
       })
       .catch((err) => {
@@ -50,8 +56,8 @@ export const getDataById = (url) => {
     dispatch(getDataStarted());
 
     fetch(url)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         dispatch(getShowSuccess(data));
       })
       .catch((err) => {

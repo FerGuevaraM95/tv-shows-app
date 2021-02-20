@@ -2,7 +2,8 @@ import {
   GET_DATA_STARTED,
   GET_DATA_SUCCESS,
   GET_DATA_FAILURE,
-  GET_SHOW_SUCCESS
+  GET_SHOW_SUCCESS,
+  ORDER_LIST,
 } from "../types/showsTypes";
 
 const defaultState = {
@@ -10,6 +11,7 @@ const defaultState = {
   error: null,
   data: {},
   show: {},
+  order: "recent",
 };
 
 const showsReducer = (state = defaultState, action) => {
@@ -38,6 +40,11 @@ const showsReducer = (state = defaultState, action) => {
         loading: false,
         error: null,
         show: action.payload,
+      };
+    case ORDER_LIST:
+      return {
+        ...state,
+        order: action.payload,
       };
 
     default:

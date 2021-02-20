@@ -1,12 +1,12 @@
-import { Container, Ripple } from "./styles";
+import { Container } from "./styles";
 
 export const Loader = () => {
   return (
     <Container>
-      <Ripple>
+      <div className="lds-ripple">
         <div></div>
         <div></div>
-      </Ripple>
+      </div>
     </Container>
   );
 };

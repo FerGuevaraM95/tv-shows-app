@@ -14,14 +14,13 @@ export const FilterContainer = styled.ul`
 `;
 
 export const Chip = styled.li`
-  margin: 0 10px;
-  padding: 4px 12px;
+  margin: 0 8px;
+  padding: 4px 11px;
   font-size: 12px;
   font-weight: 500;
-  /* line-height: 24px; */
-  color: #434670;
-  border: solid 0.75px #dcdce2;
+  color: ${props => props.isActive ? "#FFFFFF" : "#434670"};
+  background-color: ${props => props.isActive ? "#FE6D8E" : "#FFFFFF"};
+  border: solid 0.75px ${props => props.isActive ? "#FFFFFF" : "#DCDCE2"};
   border-radius: 25px;
-  /* opacity: 0.15; */
 `;
 

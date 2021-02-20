@@ -8,7 +8,7 @@ import { getDataById } from "../../actions/showsActions";
 
 const DetailPage = ({ match }) => {
   // Show ID
-  const id = match.params.id;
+  const id = match.params.id || "";
   const dispatch = useDispatch();
   const show = useSelector((state) => state.shows.show);
   const loading = useSelector((state) => state.shows.loading);
@@ -23,16 +23,16 @@ const DetailPage = ({ match }) => {
   }, [dispatch, id]);
 
   const {
-    poster_path = '',
+    poster_path = "",
     vote_average = 0,
     vote_count = 0,
     popularity = 0,
-    name = '',
-    last_air_date = '',
+    name = "",
+    last_air_date = "",
     episode_run_time = [],
-    type = '',
+    type = "",
     genres = [],
-    overview = '',
+    overview = "",
   } = show;
 
   const img = `https://image.tmdb.org/t/p/original${poster_path}`;
@@ -42,13 +42,14 @@ const DetailPage = ({ match }) => {
   return (
     <div>
       <DetailHeader
+        id={id}
         name={name}
         poster={img}
         vote={vote_average}
         voteCount={vote_count}
         popularity={popularity}
       />
-      <DetailInfo 
+      <DetailInfo
         name={name}
         lastAirDate={last_air_date}
         runTime={episode_run_time}
