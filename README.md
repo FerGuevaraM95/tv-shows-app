@@ -22,6 +22,7 @@ Aplicación de React que hace uso de la API de [The Movie DB](https://themoviedb
 13. Se agregó la funcionalidad de marcar como favorito el show en la pantalla de detalle (por medio de localstorage con un hook personalizado)
 14. Se agregó la función de ordenar los resultados de las listas por mayor puntuación y 
 alfabéticamente
+15. Se agregó el enlace a la sección de detalle en las imágenes de la lista, pues al probar con usuarios estos esperaban alguna reacción al presionar la imagen
 
 ### Diseño
 
@@ -34,8 +35,8 @@ Diseño tomado de [Figma Elements](https://figmaelements.com/movie-app/) credito
 * react-redux 7.2.2
 * react-router-dom 5.2.0
 * redux 4.0.5
-* redux-thunk
-* styled-components
+* redux-thunk 2.3.0
+* styled-components 5.2.1
 
 
 #### `npm start`
