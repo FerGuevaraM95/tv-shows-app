@@ -23,7 +23,12 @@ Aplicacion de React que hace uso de la API de [The Movie DB](https://themoviedb.
 14. Se agrego la función de ordenar los resultados de las listas por mayor puntución y 
 alfabéticamente 
 
-### `npm start`
+### Diseño
+
+Diseño tomado de [Figma Elements](https://figmaelements.com/movie-app/) creditos a su autor "simantOo".
+
+
+#### `npm start`
 
 Ejecuta la aplicación en el modo de desarrollo..\
 Abre [http://localhost:3000](http://localhost:3000) para ver en tu navegador.
