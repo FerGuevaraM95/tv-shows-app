@@ -17,7 +17,7 @@ const DetailPage = ({ match }) => {
   useEffect(() => {
     dispatch(
       getDataById(
-        `http://api.themoviedb.org/3/tv/${id}?api_key=6b17ac3b7653f11d47fc4e9fc7c753c7`
+        `https://api.themoviedb.org/3/tv/${id}?api_key=6b17ac3b7653f11d47fc4e9fc7c753c7`
       )
     );
   }, [dispatch, id]);
