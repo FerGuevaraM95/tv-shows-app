@@ -17,10 +17,11 @@ export const ShowImage = styled.img`
 
 export const ShowTitle = styled(Link)`
   display: block;
-  margin: 20px auto 4px;
+  margin: 20px 30px 4px;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
   color: #12153D;
 `;
 
@@ -31,6 +32,7 @@ export const RaitingBox = styled.div`
 `;
 
 export const Raiting = styled.p`
+  margin-left: 5px;
   font-size: 9px;
   font-weight: 500;
   color: #434670;
